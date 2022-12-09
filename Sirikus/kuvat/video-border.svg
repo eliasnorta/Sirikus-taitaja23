@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="195" height="195.001" viewBox="0 0 195 195.001">
+  <g id="video-border" transform="translate(-1038 -1551)">
+    <g id="Group_3620" data-name="Group 3620" transform="translate(643 -786.668)">
+      <rect id="Rectangle_2492" data-name="Rectangle 2492" width="65" height="15.263" transform="translate(460 2337.668)" fill="#c93727"/>
+      <rect id="Rectangle_2493" data-name="Rectangle 2493" width="2" height="64.952" rx="1" transform="translate(525 2359.931) rotate(90)" fill="#c93727"/>
+    </g>
+    <g id="Group_3619" data-name="Group 3619" transform="translate(-292 -1512)">
+      <path id="Rectangle_2476" data-name="Rectangle 2476" d="M1,0H1A1,1,0,0,1,2,1v9a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1A1,1,0,0,1,1,0Z" transform="translate(1491 3118)" fill="#c93727"/>
+      <rect id="Rectangle_2473" data-name="Rectangle 2473" width="54.998" height="15.263" transform="translate(1460 3063)" fill="#c93727"/>
+      <rect id="Rectangle_2474" data-name="Rectangle 2474" width="64.574" height="15.263" transform="translate(1499.735 3128) rotate(-90)" fill="#c93727"/>
+      <path id="Rectangle_2471" data-name="Rectangle 2471" d="M1.5,0h0A1.5,1.5,0,0,1,3,1.5V65a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1.5A1.5,1.5,0,0,1,1.5,0Z" transform="translate(1522 3063)" fill="#c93727"/>
+      <g id="Group_3592" data-name="Group 3592" transform="translate(1466 3063)">
+        <path id="Intersection_10" data-name="Intersection 10" d="M0,.6V49H48.4a42.14,42.14,0,0,0,.6-7.094A41.942,41.942,0,0,0,0,.6Z" transform="translate(49 49.358) rotate(180)" fill="#c93727"/>
+        <g id="Group_3205" data-name="Group 3205" transform="translate(7)">
+          <rect id="Rectangle_2136" data-name="Rectangle 2136" width="42" height="42" fill="#f2e2c9" opacity="0"/>
+          <path id="Path_4698" data-name="Path 4698" d="M299.764,0l-1.856,5.7h-6.092l4.927,3.577-1.88,5.773,4.911-3.573,4.923,3.574L302.8,9.274,307.712,5.7h-6.079Z" transform="translate(-278.816 13)" fill="#f2e2c9"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_3621" data-name="Group 3621" transform="translate(-292 -786.668)">
+      <g id="Group_3611" data-name="Group 3611" transform="translate(1491 2402.668)">
+        <rect id="Rectangle_2483" data-name="Rectangle 2483" width="65" height="15.263" transform="translate(8.735 65) rotate(-90)" fill="#c93727"/>
+        <rect id="Rectangle_2484" data-name="Rectangle 2484" width="3" height="65" transform="translate(31 0)" fill="#c93727"/>
+        <rect id="Rectangle_2488" data-name="Rectangle 2488" width="2" height="65" transform="translate(0 0)" fill="#c93727"/>
+      </g>
+    </g>
+    <g id="Group_3622" data-name="Group 3622" transform="translate(1038 1616)">
+      <g id="Group_3611-2" data-name="Group 3611">
+        <rect id="Rectangle_2483-2" data-name="Rectangle 2483" width="65" height="15.263" transform="translate(10.002 65) rotate(-90)" fill="#c93727"/>
+        <rect id="Rectangle_2484-2" data-name="Rectangle 2484" width="3" height="65" transform="translate(0 0)" fill="#c93727"/>
+        <rect id="Rectangle_2488-2" data-name="Rectangle 2488" width="2" height="65" transform="translate(32 0)" fill="#c93727"/>
+      </g>
+    </g>
+    <g id="Group_3623" data-name="Group 3623" transform="translate(1168 1681)">
+      <path id="Rectangle_2476-2" data-name="Rectangle 2476" d="M0,0H2A0,0,0,0,1,2,0V9a1,1,0,0,1-1,1H1A1,1,0,0,1,0,9V0A0,0,0,0,1,0,0Z" transform="translate(31)" fill="#c93727"/>
+      <rect id="Rectangle_2473-2" data-name="Rectangle 2473" width="54.998" height="15.263" transform="translate(0 49.738)" fill="#c93727"/>
+      <rect id="Rectangle_2474-2" data-name="Rectangle 2474" width="64.574" height="15.263" transform="translate(54.998 0.001) rotate(90)" fill="#c93727"/>
+      <path id="Rectangle_2471-2" data-name="Rectangle 2471" d="M0,0H3A0,0,0,0,1,3,0V63.5A1.5,1.5,0,0,1,1.5,65h0A1.5,1.5,0,0,1,0,63.5V0A0,0,0,0,1,0,0Z" transform="translate(62 0.001)" fill="#c93727"/>
+      <g id="Group_3592-2" data-name="Group 3592" transform="translate(6 15.643)">
+        <path id="Intersection_10-2" data-name="Intersection 10" d="M0,48.4V0H48.4A42.14,42.14,0,0,1,49,7.094,41.906,41.906,0,0,1,7.092,49,42.147,42.147,0,0,1,0,48.4Z" transform="translate(49 49) rotate(180)" fill="#c93727"/>
+        <g id="Group_3205-2" data-name="Group 3205" transform="translate(7 7.358)">
+          <rect id="Rectangle_2136-2" data-name="Rectangle 2136" width="42" height="42" fill="#f2e2c9" opacity="0"/>
+          <path id="Path_4698-2" data-name="Path 4698" d="M299.764,15.053l-1.856-5.7h-6.092l4.927-3.577L294.862,0l4.911,3.573L304.7,0,302.8,5.778l4.909,3.573h-6.079Z" transform="translate(-278.816 13.947)" fill="#f2e2c9"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_3624" data-name="Group 3624" transform="translate(1038 1681)">
+      <path id="Rectangle_2476-3" data-name="Rectangle 2476" d="M0,0H2A0,0,0,0,1,2,0V9a1,1,0,0,1-1,1H1A1,1,0,0,1,0,9V0A0,0,0,0,1,0,0Z" transform="translate(32)" fill="#c93727"/>
+      <rect id="Rectangle_2473-3" data-name="Rectangle 2473" width="54.998" height="15.263" transform="translate(10.002 49.738)" fill="#c93727"/>
+      <rect id="Rectangle_2474-3" data-name="Rectangle 2474" width="64.574" height="15.263" transform="translate(25.265 0.001) rotate(90)" fill="#c93727"/>
+      <path id="Rectangle_2471-3" data-name="Rectangle 2471" d="M0,0H3A0,0,0,0,1,3,0V63.5A1.5,1.5,0,0,1,1.5,65h0A1.5,1.5,0,0,1,0,63.5V0A0,0,0,0,1,0,0Z" transform="translate(0 0.001)" fill="#c93727"/>
+      <g id="Group_3592-3" data-name="Group 3592" transform="translate(10 15.643)">
+        <path id="Intersection_10-3" data-name="Intersection 10" d="M0,.6V49H48.4a42.14,42.14,0,0,0,.6-7.094A41.942,41.942,0,0,0,0,.6Z" fill="#c93727"/>
+        <g id="Group_3205-3" data-name="Group 3205" transform="translate(0 7.358)">
+          <rect id="Rectangle_2136-3" data-name="Rectangle 2136" width="42" height="42" fill="#f2e2c9" opacity="0"/>
+          <path id="Path_4698-3" data-name="Path 4698" d="M299.764,15.053l1.856-5.7h6.092l-4.927-3.577L304.666,0l-4.911,3.573L294.832,0l1.893,5.778-4.909,3.573h6.079Z" transform="translate(-278.712 13.947)" fill="#f2e2c9"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_3625" data-name="Group 3625" transform="translate(1038 1551)">
+      <path id="Rectangle_2476-4" data-name="Rectangle 2476" d="M1,0H1A1,1,0,0,1,2,1v9a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1A1,1,0,0,1,1,0Z" transform="translate(32 55)" fill="#c93727"/>
+      <rect id="Rectangle_2473-4" data-name="Rectangle 2473" width="54.998" height="15.263" transform="translate(10.002 0)" fill="#c93727"/>
+      <rect id="Rectangle_2474-4" data-name="Rectangle 2474" width="64.574" height="15.263" transform="translate(10.002 65) rotate(-90)" fill="#c93727"/>
+      <path id="Rectangle_2471-4" data-name="Rectangle 2471" d="M1.5,0h0A1.5,1.5,0,0,1,3,1.5V65a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1.5A1.5,1.5,0,0,1,1.5,0Z" fill="#c93727"/>
+      <g id="Group_3592-4" data-name="Group 3592" transform="translate(10)">
+        <path id="Intersection_10-4" data-name="Intersection 10" d="M0,48.4V0H48.4A42.14,42.14,0,0,1,49,7.094,41.906,41.906,0,0,1,7.092,49,42.147,42.147,0,0,1,0,48.4Z" transform="translate(0 0.358)" fill="#c93727"/>
+        <g id="Group_3205-4" data-name="Group 3205">
+          <rect id="Rectangle_2136-4" data-name="Rectangle 2136" width="42" height="42" fill="#f2e2c9" opacity="0"/>
+          <path id="Path_4698-4" data-name="Path 4698" d="M299.764,0l1.856,5.7h6.092l-4.927,3.577,1.88,5.773-4.911-3.573-4.923,3.574,1.893-5.778L291.816,5.7h6.079Z" transform="translate(-278.712 13)" fill="#f2e2c9"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_3626" data-name="Group 3626" transform="translate(643 -1229.667)">
+      <rect id="Rectangle_2498" data-name="Rectangle 2498" width="65" height="15.263" transform="translate(460 2960.405)" fill="#c93727"/>
+      <rect id="Rectangle_2497" data-name="Rectangle 2497" width="2" height="64.952" rx="1" transform="translate(525 2951.405) rotate(90)" fill="#c93727"/>
+    </g>
+  </g>
+</svg>

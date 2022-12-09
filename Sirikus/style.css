@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+
+/* ___ Header ___ */
+Header {
+    /* background-color: rgb(44, 25, 25); */
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    margin-bottom: -12em;
+    z-index: 999;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.3s;
+    /* backdrop-filter: blur(5px); */
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 190px;
+    transition: 0.2s;
+
+}
+
+.logo {
+    margin: 0 3em;
+    cursor: pointer;
+}
+.logo img {
+    transition: 0.2s;
+}
+
+.header_container ul {
+    display: flex;
+    list-style: none;
+}
+
+.header_container ul li {
+    margin: 2em;
+    position: relative;
+    transition: 0.2s;
+
+}
+
+.header_container ul li a {
+    padding: 1em;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header_container ul li a:hover {
+    /* text-decoration: underline; */
+    color: dodgerblue;
+}
+
+.header_container ul li a:hover::after {
+    content: "★";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    bottom: -5px;
+    right: 50%;
+}
+
+/* ___ body ___ */
+/* HERO */
+
+#hero {
+    font-size: 26px;
+    width: 100%;
+    /* height: 100vh; */
+    margin-top: 9em;
+}
+#test {
+    position: relative;
+}
+#test::before {
+    content: "";
+    position: absolute;
+    background-image: url('kuvat/Circus-Restaurant.jfif');
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.3) grayscale(70%);
+
+}
+#test-inside {
+    position: relative;
+}
+
+/* #hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    height: 250vh;
+    width: 100%;
+    background-image: url('kuvat/Circus-Restaurant.jfif');
+    background-size: cover;
+    filter: brightness(0.3) grayscale(70%);
+    z-index: -1;
+    background-attachment: fixed;
+} */
+
+.hero_container {
+    color: #fff;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    max-width: 1100px;
+    height: 800px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: green; */
+    /* position: relative; */
+}
+
+.hero_container h1 {
+    font-family: 'Rye', serif;
+    color: #50A0FF;
+}
+
+.hero_curved_text {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.hero_curved_text img {
+    width: 100%;
+}
+
+.hero_reviews {
+    color: #ffe600;
+    font-family: 'Pacifico';
+    font-size: 17px;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+/* .hero_p {
+    line-height: 34px;
+    font-size: 19px;
+    width: 70%;
+    margin: 0 auto;
+} */
+
+.curved_text {
+    -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.hero_circus-ball {
+    width: 72px; 
+    height: 72px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 23em;
+    /* margin-bottom: 3em; */
+    /* position: absolute;
+    bottom: 0; */
+}
+.hero_circus-ball img {
+    width: 90px;
+    margin-bottom: 1px;
+}
+
+.circus_frame {
+    background-image: url('kuvat/circus-frame2.svg');
+    position: absolute;
+    background-size: contain;
+    width: 100%;
+    max-width: 850px;
+    /* background-color: red; */
+    height: 485px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-top: 2em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.circus_frame h1 {
+    font-size: 26px;
+    font-family: 'Rye', serif;
+    margin-bottom: 1.5em;
+}
+
+.frame_content {
+    display: flex;
+    width: 87%;
+    margin: 0 auto;
+    height: 250px;
+}
+.frame_info {
+    padding-right: 35px;
+    display: flex;
+    align-items: center;
+}
+.frame_info p {
+    font-size: 17px;
+    text-align: left;
+    font-family: 'EB Garamond', serif;
+}
+
+.frame_tickets {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    /* background-color: yellow; */
+    /* width: 90%; */
+    /* margin: 0 auto; */
+}
+
+.lippu {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin: 10px;
+    box-shadow: 0px 5px 10px rgb(66, 66, 66);
+    width: 360px;
+    height: 55px;
+    font-size: 15px;
+    white-space: nowrap;
+    margin-right: 0;
+}
+.lippu_date {
+    background-color: #FF7A00;
+    width: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 14px;
+}
+.lippu_info {
+    background-color: lightgrey;
+    display: flex;
+    color: #000;
+    padding: 10px;
+    width: 65%;
+    justify-content: space-between;
+}
+.lippu_time {
+    width: 3.8ch;
+    overflow: hidden;
+}
+
+.lippu_btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.lippu small {
+    /* font-size: 19px; */
+}
+
+.lippu_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    color: #222;
+    /* padding: 10px 20px; */
+    width: 25%;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+
+    --background-color: rgb(10, 161, 10);
+    --border-size: 2px;
+    --accent-color: rgb(0, 28, 105);
+  }
+
+.lippu_btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.5);
+  }
+  
+  .lippu_btn:hover::before,
+  .lippu_btn:focus::before {
+    transform: scale(0);
+  }
+  
+  .lippu_btn {
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--accent-color);
+    transition: color 500ms ease-in-out;
+  }
+  
+  .lippu_btn:hover,
+  .lippu_btn:focus {
+    color: rgb(0, 0, 0);
+  }
+
+  .frame_button {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+
+  .frame_button button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: rgb(224, 43, 43);
+    border: 3px solid lightgray;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .frame_button button:hover {
+    background-color: rgb(170, 31, 31);
+    
+  }
+
+/* ___ about section ___ */
+
+#about {
+    /* font-family: 'Rye', serif; */
+    font-family: 'EB Garamond', serif;
+    font-size: 24px;
+    /* background-color: rgb(29, 29, 29); */
+    /* height: 1000px; */
+    color: #fff;
+    text-align: center;
+    margin-top: 4em;
+    padding-bottom: 5em;
+}
+
+.about_container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about_container h1 {
+    font-family: 'Rye', serif;
+    margin-bottom: 2em;
+    color: #50A0FF;
+}
+
+.about_us {
+    line-height: 40px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* section for contact info and embedded map */
+.contact_and_map {
+    display: flex;
+    margin-top: 5em;
+    justify-content: center;
+}
+.contact_info {
+    text-align: left;
+    font-size: 19px;
+    display: flex;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+/* alaindeksi / footer */
+footer {
+    background-color: #222;
+    background-image: url('kuvat/circus-pattern.svg');
+    background-repeat: repeat-x;
+    /* margin-top: 5em; */
+    padding: 2em;
+    text-align: center;
+    color: white;
+}
+.footer_logo {
+    margin: 2em 0;
+}
+.footer_copyright {
+    margin-top: 50px;
+}
+
+/* ___ reposniveness ___ */
+
+@media all and (max-width: 900px) {
+    * {
+        /* background-color: yellow; */
+    }
+    /* header/yläindeksi */
+    header {
+        background-color: #252525;
+    }
+    header .logo {
+        position: absolute;
+        left: 0;
+    }
+    .logo img {
+        width: 95px;
+    }
+    .header_container {
+        height: 100px;
+    }
+    .header_container ul {
+        right: 0;
+        position: absolute;
+        margin-right: 2em;
+    }
+    .header_container ul:first-child {
+        margin-right: 13em;
+        /* background-color: red; */
+    }
+    .header_container ul li {
+        margin: 0;
+    }
+
+    /* hero osio */
+    #hero {
+        height: 600px;
+    }
+
+    .circus_frame {
+        width: 100vw
+    }
+}
