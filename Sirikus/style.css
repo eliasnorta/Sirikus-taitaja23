@@ -266,11 +266,6 @@ Header {
     overflow: hidden;
 }
 
-.lippu_btn a {
-    color: #fff;
-    text-decoration: none;
-}
-
 .lippu small {
     /* font-size: 19px; */
 }
@@ -280,8 +275,7 @@ Header {
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
-    color: #222;
-    /* padding: 10px 20px; */
+    /* color: #222; */
     width: 25%;
     border: none;
     outline: none;
@@ -291,6 +285,9 @@ Header {
     --background-color: rgb(10, 161, 10);
     --border-size: 2px;
     --accent-color: rgb(0, 28, 105);
+
+    color: #fff;
+    text-decoration: none;
   }
 
 .lippu_btn::before {
@@ -321,7 +318,7 @@ Header {
   
   .lippu_btn:hover,
   .lippu_btn:focus {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
 
   .frame_button {

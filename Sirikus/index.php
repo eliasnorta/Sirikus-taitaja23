@@ -34,7 +34,9 @@
                 <li><a href="#">Esitykset</a></li>
             </ul>
             <div class="logo">
-                <img src="kuvat/Sirikus-logo.svg" alt="sirikus logo">
+                <a href="index.php">
+                    <img src="kuvat/Sirikus-logo.svg" alt="sirikus logo">
+                </a>
             </div>
             <ul>
                 <li><a href="#">Yhteystiedot</a></li>
@@ -112,9 +114,8 @@
                                             <small> <?php echo $rows['aika']; ?> </small>
                                         </div>
                                     </div>
-                                    <div class="lippu_btn">
-                                        <a href="#">Varaa!</a>
-                                    </div>
+
+                                    <a class="lippu_btn" href="tilauslomake.php?esitys=<?php echo $rows['esitysID']; ?>" >Varaa!</a>
                                 </div>
                                 <?php
                             }
@@ -125,6 +126,18 @@
                     </div>
                 </div>
                 
+                <!-- <script type="text/javascript">
+                    $(document).ready(function(){
+
+                        $('.lippu_btn').on('click', function(){
+                            $eventID = $(this).attr("data");
+
+                            alert($eventID);
+                        })
+
+                    })
+                </script> -->
+
             </div>
 
             <div class="hero_circus-ball">
