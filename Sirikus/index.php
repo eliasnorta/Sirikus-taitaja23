@@ -74,7 +74,7 @@
                 <img src="kuvat/curved-title2.svg" alt="title">
             </div>
             <p class="hero_reviews">
-                “Mahtava!” ⭐ “Uskomaton!” ⭐ “Kiva!” ⭐
+                ⭐ “Mahtava!” ⭐ “Uskomaton!” ⭐ “Kiva!”
             </p>
             <!-- <img src="Blue_Stripes_with_Cream_Shape.png" alt="star"> -->
             <div class="circus_frame">

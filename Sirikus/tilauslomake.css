@@ -154,8 +154,15 @@ Header {
     box-shadow: inset 0 0 5px rgb(128, 128, 128);
 }
 
+.lomake_nappi {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
 .lomake_nappi button {
     padding: 10px 20px;
+    text-align: center;
     border-radius: 15px;
     background-color: rgb(224, 43, 43);
     border: 3px solid lightgray;
@@ -163,10 +170,12 @@ Header {
     transition: 0.3s;
     cursor: pointer;
 }
-.lomake_nappi .error {
+.error {
     color: red;
     font-weight: bold;
-    display: none;
+    margin-bottom: -10px;
+    white-space: nowrap;
+    /* display: none; */
 }
 .lomake_nappi button:hover {
     background-color: rgb(170, 31, 31);

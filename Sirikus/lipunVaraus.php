@@ -11,8 +11,9 @@
         $esitys = mysqli_real_escape_string($conn, $_POST['esitys']);
         // check that all form fields are filled
         if (empty($email) || empty($phone) || empty($ticket) || empty($esitys)) {
+            echo "<script>alert('hello world');</script>";
             // header("Location: ./tilauslomake.php?esitys=$esitys?form=empty");
-            echo "<script>alert('fill in all fields');</script>";
+            // echo "<script>alert('fill in all fields');</script>";
             exit();
         } else {
             // check for invalid email

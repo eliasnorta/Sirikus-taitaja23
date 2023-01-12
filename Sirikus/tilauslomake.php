@@ -8,9 +8,9 @@
 	$sql = "SELECT * FROM esitys where esitysID='{$esitys}'";
 	$result = mysqli_query($conn, $sql);
 
-	$sql2 = "SELECT DAY(pvm) AS DAY FROM esitys";
+	// hakee päivämäärän ja muotoilee sen eurooppalaiseen tapaan
+	$sql2 = "SELECT DATE_FORMAT(pvm, GET_FORMAT(DATE,'EUR')) AS DAY FROM esitys where esitysID='{$esitys}'";
 	$result2 = mysqli_query($conn, $sql2);
-
 ?>
 
 <!DOCTYPE html>
@@ -61,18 +61,19 @@
                         <div class="esitys_info-item">
                             <img src="kuvat/icons/icons8-calendar-24.png" alt="calendar">
                             <?php
-                                $str = $rows['pvm'];
-                                $x = (explode("-",$str));
-                            ?>
-                                <small> <?php echo substr(date("l",mktime(0,0,0,$x[1],$x[2],$x[0])), 0, 3) ?> </small>
-                                <small> <?php echo substr(date("d",mktime(0,0,0,$x[1],$x[2],$x[0])), 0, 3) ?> </small>
-                                <small> <?php echo substr(date("M",mktime(0,0,0,$x[1],$x[2],$x[0])), 0, 5) ?> </small>
-                            <?php
+                                // näyttää päivämäärän eurooppalaisessa muodossa
+                                while($rows2 = mysqli_fetch_array($result2)) {
+                                    echo $rows2['DAY'];
+                                }
                             ?>
                         </div>
                         <div class="esitys_info-item">
                             <img src="kuvat/icons/icons8-clock-24.png" alt="time">
-                            <?php echo $rows['aika']; ?>
+                            <?php
+                                $time = $rows['aika'];
+                                $test = substr($time, 0, -3);
+                                echo $test;
+                            ?>
                         </div>
                     </div>
                     <div class="esitys_row">
@@ -83,7 +84,11 @@
                         </div>
                         <div class="esitys_info-item">
                             <img src="kuvat/icons/icons8-seats.png" alt="">
-                            <?php echo $rows['vapaitapaikkoja'];?> / <?php echo $rows['paikat']; ?>
+                            <?php 
+                                echo $rows['vapaitapaikkoja'];?> / <?php echo $rows['paikat']; 
+                                
+                                $availableseats = $rows['vapaitapaikkoja'];
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -95,8 +100,8 @@
 
             <div id="varaus_lomake">
                 <div class="lomake_form">
-
-                    <form action="lipunVaraus.php" method="POST">
+                    <!-- form for reserving a ticket -->
+                    <form method="POST">
                         <label for="">Sähköposti: *</label>
                         <br>
                         <input style="display:none;" name="esitys" type="number" value="<?php echo $esitys?>">
@@ -111,7 +116,7 @@
                         <input class="lomake_input lomake_liput-maara" value="1" type="number" name="ticket">
 
                         <div class="lomake_nappi">
-                            <small class="error">Yritit tilata liian monta lippua!</small>
+                            <small class="error"></small>
                             <br>
                             <button type="submit" name="submit" id="lomake_submit">Varaa</button>
                         </div>
@@ -122,19 +127,51 @@
         </div>
     </section>
 
-    <?php
-        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    <?php 
 
-        if (strpos($fullUrl, "form=empty") == true) {
-            echo "<script>alert('fill in all fields');</script>";
-            exit();
-        } else if (strpos($fullUrl, "form=email") == true) {
-            echo "<script>alert('You used invalid characters');</script>";
-            exit();
-        } else if (strpos($fullUrl, "form=success") == true) {
-            echo "You have bought tickets!";
-            exit();
+        // check if form is submitted
+        if (isset($_POST['submit'])) {
+            // database connection
+            include "connect.php";
+            // get data from form
+            $email = mysqli_real_escape_string($conn, $_POST['email']);
+            $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+            $ticket = mysqli_real_escape_string($conn, $_POST['ticket']);
+            $esitys = mysqli_real_escape_string($conn, $_POST['esitys']);
+            // check that all form fields are filled
+            if (empty($email) || empty($phone) || empty($ticket) || empty($esitys)) {
+                echo "<script>$(document).ready(function(){ $('.error').html('Täytä kaikki tiedot!'); });</script>";
+                exit();
+            } else {
+                // check for invalid email
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    echo "<script>$(document).ready(function(){ $('.error').html('You used invalid characters'); });</script>";
+                    exit();
+                } else {
+                    if ($ticket > $availableseats) {
+                        echo "<script>$(document).ready(function(){ $('.error').html('Yritit tilata liian monta lippua.'); });</script>";
+                        exit();
+                    } else {
+                        // submit form data to database
+                        $sql = "insert into `tilaaja` (sposti, puhelin, paikkojenlkm, esitysID) values (?, ?, ?, ?);";
+        
+                        $stmt = mysqli_stmt_init($conn);
+                        if (!mysqli_stmt_prepare($stmt, $sql)) {
+                            echo "SQL error";
+                        } else {
+                            mysqli_stmt_bind_param($stmt, "ssii", $email, $phone, $ticket, $esitys);
+                            mysqli_stmt_execute($stmt);
+                        }
+                        echo'<script>alert("Varasit liput onistuneesti! Vahvistus lähetetty osoitteeseen: '.$email.'")</script>';
+                        echo("<script>location.href = './index.php';</script>");
+                        exit();
+                    }
+                }
+                
+                
+            }
         }
+
     ?>
 
 </body>
