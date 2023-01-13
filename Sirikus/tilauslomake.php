@@ -46,7 +46,7 @@
 
     <!-- lippujen varaus -->
     <section id="lippujen_varaus">
-    <a href="index.php" type="submit">Takaisin</a>
+    <a href="index.php" type="submit"><img src="kuvat/icons/icons8-back-arrow-30.png" alt="back"></a>
         <h1 class="varaus_title"><span>Varaa liput</span></h1>
         <div class="varaus_content">
             <div id="varaus_esitys">
@@ -85,7 +85,7 @@
                         <div class="esitys_info-item">
                             <img src="kuvat/icons/icons8-seats.png" alt="">
                             <?php 
-                                echo $rows['vapaitapaikkoja'];?> / <?php echo $rows['paikat']; 
+                                echo $rows['vapaitapaikkoja'];?>/<?php echo $rows['paikat']; 
                                 
                                 $availableseats = $rows['vapaitapaikkoja'];
                             ?>

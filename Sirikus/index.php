@@ -46,26 +46,46 @@
     </header>
 
     <script type="text/javascript">
-        // When the user scrolls down 50px from the top of the document, resize the header's font size
-        window.onscroll = function() {scrollFunction()};
+        $(document).ready(function(){
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 150) {
-                $(".header_container").css({"height": "80px"});
-                $(".logo img").css({"width": "80px", "margin": "0 -1.5em"});
-                $(".header_container ul li").css({"margin": "0.5em"});
-                document.querySelector('header').style.background = 'rgba(44, 25, 25, 0.9)';
-                document.querySelector('header').style.marginBottom = '-6em';
-                document.querySelector('header').style.backdropFilter = 'blur(10px)';
-            } else {
-                $(".logo img").css({"width": "auto", "margin": "0 0em"})
-                $(".header_container").css({ "height": "190px"});
-                $(".header_container ul li").css({"margin": "2em"});
-                document.querySelector('header').style.background = '#00000000';
-                document.querySelector('header').style.marginBottom = '-12em';
-                document.querySelector('header').style.backdropFilter = 'blur(0px)';
+            // when page page width is resized
+            $(window).resize(function() {
+                // check if window with is less than 900px
+                if ($(window).width() <= 900) {
+                    // detects when the page is scrolled down
+                    window.onscroll = function() {
+                        null;
+                    };
+                } else {
+                    // detects when the page is scrolled down
+                    window.onscroll = function() {
+                        // call function
+                        scrollFunction()
+                    };
+                }
+            }).resize();
+
+            
+            
+            function scrollFunction() {
+                // When the user scrolls down 50px from the top of the document, resize the header's font size.
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 150) {
+                    $(".header_container").css({"height": "80px"});
+                    $(".logo img").css({"width": "80px", "margin": "0 -1.5em"});
+                    $(".header_container ul li").css({"margin": "0.5em"});
+                    document.querySelector('header').style.background = 'rgba(44, 25, 25, 0.9)';
+                    document.querySelector('header').style.marginBottom = '-6em';
+                    document.querySelector('header').style.backdropFilter = 'blur(10px)';
+                } else {
+                    $(".logo img").css({"width": "auto", "margin": "0 0em"})
+                    $(".header_container").css({ "height": "190px"});
+                    $(".header_container ul li").css({"margin": "2em"});
+                    document.querySelector('header').style.background = '#00000000';
+                    document.querySelector('header').style.marginBottom = '-12em';
+                    document.querySelector('header').style.backdropFilter = 'blur(0px)';
+                }    
             }
-        }
+        })
     </script>
 
     <section id="hero">
@@ -110,12 +130,34 @@
                                                 <small> <?php echo $rows['kaupunki']; ?> - <?php echo $rows['esityspaikka']; ?> </small>
                                             </div>
                                         </div>
-                                        <div class="lippu_time">
-                                            <small> <?php echo $rows['aika']; ?> </small>
-                                        </div>
-                                    </div>
+                                        <div class="lippu_aika-ja-paikat">
+                                            <div class="lippu_time">
+                                                <small> <?php echo $rows['aika']; ?> </small>
+                                            </div>
+                                            <div class="lippu_info-paikat">
+                                                <?php 
+                                                    $availableseats = $rows['vapaitapaikkoja'];
+                                                    $totalseats = $rows['paikat'];
 
-                                    <a class="lippu_btn" href="tilauslomake.php?esitys=<?php echo $rows['esitysID']; ?>" >Varaa!</a>
+                                                    if ($availableseats < 10) {
+                                                        echo "<div class='applyred'>".$availableseats."/".$totalseats."</div>";
+                                                    } else {
+                                                        echo "<div class='applygreen'>".$availableseats."/".$totalseats."</div>";
+                                                    }
+                                                ?>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <?php 
+                                        $esitys = intval($rows['esitysID']);
+                                        // if there are available seats for a show, then display a working button. Otherwise display a disabled button.
+                                        if (!$availableseats <= 0) {
+                                            echo "<a href=tilauslomake.php?esitys=".$esitys." class='lippu_btn'>Varaa!</a>";
+                                        } else {
+                                            echo "<a id='disabled' class='lippu_btn disabled'>Ei saatavilla</a>";
+                                        }
+                                    ?>
                                 </div>
                                 <?php
                             }
@@ -126,17 +168,13 @@
                     </div>
                 </div>
                 
-                <!-- <script type="text/javascript">
+                <script type="text/javascript">
                     $(document).ready(function(){
-
-                        $('.lippu_btn').on('click', function(){
-                            $eventID = $(this).attr("data");
-
-                            alert($eventID);
+                        $('.disabled').on('click', function(){
+                            alert("Liput on loppuunmyyty!");
                         })
-
                     })
-                </script> -->
+                </script>
 
             </div>
 

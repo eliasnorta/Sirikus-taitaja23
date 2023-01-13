@@ -159,7 +159,7 @@ Header {
   transform: rotate(2deg);
 }
 .hero_circus-ball {
-    width: 72px; 
+    width: 72px;
     height: 72px;
     margin: 0 auto;
     left: 0;
@@ -261,13 +261,40 @@ Header {
     width: 65%;
     justify-content: space-between;
 }
+.lippu_aika-ja-paikat {
+    position: relative;
+}
+.lippu_info-paikat {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
 .lippu_time {
+    float: right;
     width: 3.8ch;
     overflow: hidden;
 }
 
 .lippu small {
     /* font-size: 19px; */
+}
+
+.applyred {
+    color: red;
+}
+.applygreen {
+    color: green;
+}
+
+.disabled::before {
+    background-color: var(--background-color);
+    --background-color: red;
+    color: yellow;
+}
+#disabled {
+    background-color: red;
 }
 
 .lippu_btn {
@@ -288,7 +315,7 @@ Header {
 
     color: #fff;
     text-decoration: none;
-  }
+}
 
 .lippu_btn::before {
     content: '';
@@ -303,19 +330,19 @@ Header {
     transition: transform 0.3s ease-in-out;
     transform: scale(1.5);
   }
-  
+
   .lippu_btn:hover::before,
   .lippu_btn:focus::before {
     transform: scale(0);
   }
-  
+
   .lippu_btn {
     z-index: 1;
     overflow: hidden;
     background-color: var(--accent-color);
     transition: color 500ms ease-in-out;
   }
-  
+
   .lippu_btn:hover,
   .lippu_btn:focus {
     color: rgb(255, 255, 255);
@@ -339,7 +366,7 @@ Header {
   }
   .frame_button button:hover {
     background-color: rgb(170, 31, 31);
-    
+
   }
 
 /* ___ about section ___ */
@@ -405,15 +432,16 @@ footer {
     margin-top: 50px;
 }
 
-/* ___ reposniveness ___ */
+/* ___ responsiveness ___ */
 
 @media all and (max-width: 900px) {
     * {
-        /* background-color: yellow; */
+        /* background-color: rgb(94, 94, 49); */
     }
     /* header/yläindeksi */
     header {
-        background-color: #252525;
+        background-color: rgba(44, 25, 25, 0.9);
+        backdrop-filter: blur(10px);
     }
     header .logo {
         position: absolute;
@@ -439,11 +467,11 @@ footer {
     }
 
     /* hero osio */
-    #hero {
+    /* #hero {
         height: 600px;
     }
 
     .circus_frame {
         width: 100vw
-    }
+    } */
 }
