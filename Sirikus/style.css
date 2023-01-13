@@ -407,6 +407,10 @@ Header {
     margin-top: 5em;
     justify-content: center;
 }
+.map {
+    width: 550px;
+    height: 300px;
+}
 .contact_info {
     text-align: left;
     font-size: 19px;
@@ -433,25 +437,14 @@ footer {
 }
 
 /* ___ responsiveness ___ */
+/* header classlists */
 
 @media all and (max-width: 900px) {
-    * {
-        /* background-color: rgb(94, 94, 49); */
-    }
+    
     /* header/yläindeksi */
-    header {
-        background-color: rgba(44, 25, 25, 0.9);
-        backdrop-filter: blur(10px);
-    }
     header .logo {
         position: absolute;
         left: 0;
-    }
-    .logo img {
-        width: 95px;
-    }
-    .header_container {
-        height: 100px;
     }
     .header_container ul {
         right: 0;
@@ -460,18 +453,64 @@ footer {
     }
     .header_container ul:first-child {
         margin-right: 13em;
-        /* background-color: red; */
     }
+    
     .header_container ul li {
         margin: 0;
     }
 
-    /* hero osio */
-    /* #hero {
-        height: 600px;
+    /* hero */
+    #hero {
+        margin-top: 7em;
+    }
+}
+
+@media all and (max-width: 750px) {
+    * {
+        color: rgb(94, 94, 49);
+    }
+    /* tickets frame */
+
+    .frame_content {
+        display: block;
+    }
+    .frame_tickets {
+    }
+    .lippu {
+        /* margin: 0 auto; */
+    }
+    
+
+    /* about */
+    #about {
+        margin-top: 2em;
+    }
+    .about_us {
+        width: 90%;
+    }
+    .contact_and_map {
+        display: block;
+    }
+    .contact_info {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .map {
+        width: 99%;
+        margin: 0 auto;
     }
 
-    .circus_frame {
-        width: 100vw
-    } */
+}
+
+@media all and (max-width: 550px) {
+    
+    .about_container {
+        width: 98%;
+    }
+    .about_us {
+        width: 95%;
+    }
+
 }

@@ -113,7 +113,7 @@
                         <br>
                         <label for="">Lippujen määrä: *</label>
                         <br>
-                        <input class="lomake_input lomake_liput-maara" value="1" type="number" name="ticket">
+                        <input class="lomake_input lomake_liput-maara" value="1" type="number" min="1" max="5" name="ticket">
 
                         <div class="lomake_nappi">
                             <small class="error"></small>
@@ -154,7 +154,9 @@
                     } else {
                         // submit form data to database
                         $sql = "insert into `tilaaja` (sposti, puhelin, paikkojenlkm, esitysID) values (?, ?, ?, ?);";
-        
+                        $uusiarvo = $availableseats - $ticket;
+                        $sql1 = "update `esitys` set vapaitapaikkoja = $uusiarvo where esitysID = $esitys";
+
                         $stmt = mysqli_stmt_init($conn);
                         if (!mysqli_stmt_prepare($stmt, $sql)) {
                             echo "SQL error";
@@ -162,6 +164,11 @@
                             mysqli_stmt_bind_param($stmt, "ssii", $email, $phone, $ticket, $esitys);
                             mysqli_stmt_execute($stmt);
                         }
+                        if ($conn->query($sql1) === TRUE) {
+                            echo "Record updated successfully";
+                        } else {
+                            echo "Error updating record: " . $conn->error;
+                        };
                         echo'<script>alert("Varasit liput onistuneesti! Vahvistus lähetetty osoitteeseen: '.$email.'")</script>';
                         echo("<script>location.href = './index.php';</script>");
                         exit();

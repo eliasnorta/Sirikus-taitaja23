@@ -56,7 +56,11 @@
                     window.onscroll = function() {
                         null;
                     };
+                    // apply normal styling
+                    applyStyling();
+                    headerResponsive();
                 } else {
+                    scrollFunction()
                     // detects when the page is scrolled down
                     window.onscroll = function() {
                         // call function
@@ -65,25 +69,36 @@
                 }
             }).resize();
 
-            
-            
             function scrollFunction() {
                 // When the user scrolls down 50px from the top of the document, resize the header's font size.
                 if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 150) {
-                    $(".header_container").css({"height": "80px"});
-                    $(".logo img").css({"width": "80px", "margin": "0 -1.5em"});
-                    $(".header_container ul li").css({"margin": "0.5em"});
-                    document.querySelector('header').style.background = 'rgba(44, 25, 25, 0.9)';
-                    document.querySelector('header').style.marginBottom = '-6em';
-                    document.querySelector('header').style.backdropFilter = 'blur(10px)';
+                    applyStyling();
                 } else {
-                    $(".logo img").css({"width": "auto", "margin": "0 0em"})
-                    $(".header_container").css({ "height": "190px"});
-                    $(".header_container ul li").css({"margin": "2em"});
-                    document.querySelector('header').style.background = '#00000000';
-                    document.querySelector('header').style.marginBottom = '-12em';
-                    document.querySelector('header').style.backdropFilter = 'blur(0px)';
+                    normalStyling();
                 }    
+            }
+
+            function applyStyling() {
+                $(".header_container").css({"height": "80px"});
+                $(".logo img").css({"width": "80px", "margin": "0 -1.5em"});
+                $(".header_container ul li").css({"margin": "0.5em"});
+                document.querySelector('header').style.background = 'rgba(44, 25, 25, 0.9)';
+                document.querySelector('header').style.marginBottom = '-6em';
+                document.querySelector('header').style.backdropFilter = 'blur(10px)';
+            }
+
+            function normalStyling() {
+                $(".logo img").css({"width": "auto", "margin": "0 0em"})
+                $(".header_container").css({ "height": "190px"});
+                $(".header_container ul li").css({"margin": "2em"});
+                document.querySelector('header').style.background = '#00000000';
+                document.querySelector('header').style.marginBottom = '-12em';
+                document.querySelector('header').style.backdropFilter = 'blur(0px)';
+            }
+
+            function headerResponsive() {
+                // document.querySelector('header').style.background = 'blue';
+                
             }
         })
     </script>
@@ -198,10 +213,10 @@
                 Sirkuskoulu Sirikus <br> Kivenlahdentie 7 <br> 02320 Espoo <br><br> GSM: +358 50 567123 <br> sirikus@sirikus.fi
                 </p>
                 <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.7010724485303!2d24.660797499999997!3d60.1525721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468df4b1b436aa45%3A0x82d74da59421beb8!2sKivenlahdentie%207%2C%2002320%20Espoo!5e0!3m2!1sen!2sfi!4v1670584546479!5m2!1sen!2sfi" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.7010724485303!2d24.660797499999997!3d60.1525721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468df4b1b436aa45%3A0x82d74da59421beb8!2sKivenlahdentie%207%2C%2002320%20Espoo!5e0!3m2!1sen!2sfi!4v1670584546479!5m2!1sen!2sfi" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
