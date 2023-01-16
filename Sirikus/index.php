@@ -112,6 +112,7 @@
                 ⭐ “Mahtava!” ⭐ “Uskomaton!” ⭐ “Kiva!”
             </p>
             <!-- <img src="Blue_Stripes_with_Cream_Shape.png" alt="star"> -->
+
             <div class="circus_frame">
                 <h1>Tulevat näytökset</h1>
                 <div class="frame_content">
@@ -119,7 +120,9 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             <br><br>
-                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            <span class="about_us-hide">
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </span>
                         </p>
                     </div>
                     <div class="frame_tickets">
@@ -192,6 +195,7 @@
                 </script>
 
             </div>
+
 
             <div class="hero_circus-ball">
                 <img src="kuvat/Blue_Stripes_with_Cream_Shape.png" alt="ball">

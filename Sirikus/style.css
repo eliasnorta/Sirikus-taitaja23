@@ -28,7 +28,6 @@ Header {
     margin: 0 auto;
     height: 190px;
     transition: 0.2s;
-
 }
 
 .logo {
@@ -145,6 +144,7 @@ Header {
     font-size: 17px;
     margin-top: -10px;
     margin-bottom: 50px;
+    white-space: nowrap;
 }
 
 /* .hero_p {
@@ -179,12 +179,14 @@ Header {
     width: 90px;
     margin-bottom: 1px;
 }
-
+.test {
+    margin-left: 90px;
+}
 .circus_frame {
     background-image: url('kuvat/circus-frame2.svg');
     position: absolute;
     background-size: contain;
-    width: 100%;
+    width: 95%;
     max-width: 850px;
     /* background-color: red; */
     height: 485px;
@@ -220,6 +222,8 @@ Header {
     font-size: 17px;
     text-align: left;
     font-family: 'EB Garamond', serif;
+    color: rgb(221, 221, 221);
+
 }
 
 .frame_tickets {
@@ -452,7 +456,9 @@ footer {
         margin-right: 2em;
     }
     .header_container ul:first-child {
-        margin-right: 13em;
+        margin-right: 15em;
+        /* background-color: red; */
+
     }
     
     .header_container ul li {
@@ -466,27 +472,64 @@ footer {
 }
 
 @media all and (max-width: 750px) {
-    * {
-        color: rgb(94, 94, 49);
+    
+    /* hero */
+    .hero_container {
+        width: 80%;
     }
-    /* tickets frame */
+    .hero_reviews {
+        margin-top: 5px;
+    }
 
+    /* tickets frame */
+    .circus_frame {
+        background-image: url('kuvat/circus-frame-tall.svg');
+    }
+    .circus_frame h1 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-size: 21px;
+    }
+    .frame_info {
+        padding: 0px;
+        margin-bottom: -20px;
+    }
     .frame_content {
         display: block;
     }
     .frame_tickets {
+        width: 360px;
+        margin: 0 auto;
     }
     .lippu {
-        /* margin: 0 auto; */
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .frame_button {
+        margin-left: 0px;
+    }
+    .hero_circus-ball {
+         width: 51px;
+        height: 51px;
     }
     
+    .hero_circus-ball img {
+        width: 64px;
+        margin-bottom: 0.6px;
+    }
 
     /* about */
     #about {
-        margin-top: 2em;
+        margin-top: 0em;
+    }
+    .about_container h1 {
+        font-size: 28px;
     }
     .about_us {
         width: 90%;
+    }
+    .about_us-hide {
+        display: none;
     }
     .contact_and_map {
         display: block;
@@ -505,12 +548,109 @@ footer {
 }
 
 @media all and (max-width: 550px) {
-    
+    * {
+        /* color: rgb(94, 94, 49); */
+    }
+    /* hero */
+    #hero {
+        margin-top: 6em;
+    }
+    .hero_container {
+        width: 95%;
+        height: 700px;
+    }
+    .hero_reviews {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+    /* tickets frame */
+    .circus_frame {
+        padding-top: 3em;
+    }
+    .circus_frame h1 {
+        font-size: 17px;
+    }
+    .frame_info p {
+        font-size: 13px;
+    }
+    .lippu_btn {
+        font-size: 10px;
+    }
+    .frame_tickets {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .lippu {
+        width: 260px;
+        height: 45px;
+        font-size: 12px;
+        margin-top: 13px;
+    }
+    .lippu_date {
+        font-size: 12px;
+    }
+    .lippu_info-paikat {
+        font-size: 11px;
+    }
+    .frame_button {
+        width: 260px;
+        margin: 0 auto;
+        margin-top: 13px;
+        
+    }
+    .frame_button button {
+        font-size: 10px;
+        padding: 7px 13px;
+        border-radius: 10px;
+    }
+    .hero_circus-ball {
+        margin-top: 19em;
+    }
+    /* about */
     .about_container {
         width: 98%;
     }
+    .about_container h1 {
+        font-size: 20px;
+    }
     .about_us {
         width: 95%;
+        font-size: 19px;
+        line-height: 28px;
     }
 
+    /* contact and map */
+    .contact_info {
+        font-size: 15px;
+    }
+
+    /* footer */
+    .footer_logo img {
+        width: 120px;
+    }
+
+}
+@media all and (max-width: 460px) {
+    * {
+        /* color: rgb(255, 255, 0); */
+    } 
+
+    /* hero */
+    .hero_reviews {
+        margin-bottom: 20px;
+    }
+    .circus_frame {
+        background-image: url('kuvat/circus-frame-mobile.svg');
+    }
+    .frame_button {
+        margin-top: 7%;
+        
+    }
+    .hero_circus-ball {
+        margin-top: 20em;
+    }
+    /* contact and map */
+    .map {
+        margin-bottom: -2.5em;
+    }
 }
