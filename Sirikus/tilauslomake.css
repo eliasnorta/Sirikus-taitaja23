@@ -71,6 +71,55 @@ Header {
     right: 50%;
 }
 
+/* burger menu */
+#nav-toggle {
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 5px;
+    height: 5px;
+    width: 35px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+    top: -10px;
+}
+#nav-toggle span:after {
+    bottom: -10px;
+}
+#nav-toggle.active span {
+    background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+    top: 0;
+}
+#nav-toggle.active span:before {
+    transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+    transform: rotate(-45deg);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: 70px;
+}
+
 /* --- lippujen varaus lomake --- */
 #lippujen_varaus {
     border: 1px solid rgba(0, 0, 0, 0.308);
@@ -185,4 +234,147 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .lomake_nappi button:hover {
     background-color: rgb(170, 31, 31);
+}
+
+/* ___ responsiveness ___ */
+
+@media all and (max-width: 900px) {
+    
+    /* header/yläindeksi */
+    header .logo {
+        position: absolute;
+        left: 0;
+    }
+    .header_container ul {
+        right: 0;
+        position: absolute;
+        margin-right: 2em;
+    }
+    .header_container ul:first-child {
+        margin-right: 13em;
+    }
+    .header_container ul li {
+        margin: 0;
+    }
+
+    /* lomake */
+    #lippujen_varaus {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    /* esitystiedot */
+    .varaus_content {
+        display: block;
+    }
+
+    #varaus_esitys {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* form */
+    #varaus_lomake {
+        width: 100%;
+    }
+
+}
+
+/* hamburger menu resposniveness */
+@media only screen and (max-width: 495px) {
+    .header_container {
+        width: 90%;
+    }
+    .nav-mobile {
+        display: block;
+        right: 6%;
+        margin-top: 8px;
+    }
+    .nav-list {
+        position: absolute;
+        width: 100vw;
+        top: 140px;
+        background-color: #362d2d;
+        box-shadow: 0 10px 20px -18px rgb(0, 0, 0);
+        display: block;
+    }
+    .nav-list:nth-child(1) {
+        top: 80px;
+    }
+    .header_container ul {
+        margin-right: 0em;
+    }
+    .header_container .nav-list {
+        display: none;
+    }
+    .header_container ul:first-child {
+        margin-right: 0em;
+    }
+    .nav-list li a {
+        line-height: 30px;
+        transition: 0.3s;
+    }
+    .nav-list li a:hover {
+        background-color: lightgray;
+    }
+    .header_container ul li a:hover::after {
+        content: " ";
+    }
+    .nav-dropdown {
+        position: static;
+    }
+}
+/* hamburger menu nav list repsonsiveness */
+@media screen and (min-width: 496px) {
+    .nav-list {
+        display: flex !important;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    /* title */
+    .varaus_title{
+        background-size: 80%;
+        font-size: 4.5vw;
+        padding-top: 7px;
+        min-width: 50px;
+    }
+    /* esitystiedot */
+    #varaus_lomake {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0em;
+    }
+    .esitys_row {
+        display: block;
+        margin-top: -5px;
+    }
+    .esitys_info-item {
+        margin-top: 10px;
+    }
+    .lomake_input {
+        margin: 15px 0px;
+    }
+}
+
+@media only screen and (max-width: 260px) {
+    .esitys_title {
+        font-size: 8vw;
+    }
+    #lippujen_varaus {
+        font-size: 6vw;
+        height: 100%;
+    }
+    .esitys_info-item img {
+        width: 20%;
+    }
+    /* form button */
+    .lomake_nappi {
+        width: auto;
+    }
+    .lomake_nappi button {
+        padding: 5px 5px;
+        font-size: 5vw;
+    }
 }

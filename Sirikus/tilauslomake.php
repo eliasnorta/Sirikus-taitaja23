@@ -28,7 +28,7 @@
     <!-- ylätunniste header -->
     <header id="header">
         <div class="header_container">
-            <ul>
+            <ul class="nav-list">
                 <li><a href="#">Meistä</a></li>
                 <li><a href="#">Esitykset</a></li>
             </ul>
@@ -37,16 +37,48 @@
                     <img src="kuvat/Sirikus-logo.svg" alt="sirikus logo">
                 </a>
             </div>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="#">Yhteystiedot</a></li>
                 <li><a href="#">Liput</a></li>
             </ul>
+            <div class="nav-mobile">
+                <a id="nav-toggle" href="#!">
+                    <span>
+                    </span>
+                </a>
+            </div>
         </div>
     </header>
 
+    <!-- handles header menu in mobile width -->
+    <script type="text/javascript">
+		$(document).ready(function(){
+            (function($) { // Begin jQuery
+            $(function() { // DOM ready
+                // If a link has a dropdown, add sub menu toggle.
+                $('nav ul li a:not(:only-child)').click(function(e) {
+                    $(this).siblings('.nav-dropdown').toggle();
+                    // Close one dropdown when selecting another
+                    $('.nav-dropdown').not($(this).siblings()).hide();
+                        e.stopPropagation();
+                });
+                // Toggle open and close nav styles on click
+                $('#nav-toggle').click(function() {
+                    $('.header_container .nav-list').fadeToggle(100);
+                });
+                // Hamburger to X toggle
+                $('#nav-toggle').on('click', function() {
+                    this.classList.toggle('active');
+                });
+            }); // end DOM ready
+            })(jQuery);
+           
+		})
+	</script>
+
     <!-- lippujen varaus -->
     <section id="lippujen_varaus">
-    <a href="index.php" type="submit"><img src="kuvat/icons/icons8-back-arrow-30.png" alt="back"></a>
+        <a href="index.php" type="submit"><img src="kuvat/icons/icons8-back-arrow-30.png" alt="back"></a>
         <h1 class="varaus_title"><span>Varaa liput</span></h1>
         <div class="varaus_content">
             <div id="varaus_esitys">
@@ -174,7 +206,6 @@
                         exit();
                     }
                 }
-                
                 
             }
         }
