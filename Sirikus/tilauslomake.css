@@ -58,7 +58,6 @@ Header {
 }
 
 .header_container ul li a:hover {
-    /* text-decoration: underline; */
     color: dodgerblue;
 }
 
@@ -230,7 +229,6 @@ input[type=number]::-webkit-inner-spin-button {
     font-weight: bold;
     margin-bottom: -10px;
     white-space: nowrap;
-    /* display: none; */
 }
 .lomake_nappi button:hover {
     background-color: rgb(170, 31, 31);

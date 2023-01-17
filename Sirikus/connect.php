@@ -1,7 +1,5 @@
 <!-- yhdistää tietonakntaan -->
 <?php
-// session_start();
-
 $servername   = "localhost";
 $database = "sirkus";
 $username = "root";

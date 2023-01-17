@@ -7,7 +7,6 @@
 
 /* ___ Header ___ */
 Header {
-    /* background-color: rgb(44, 25, 25); */
     text-align: center;
     width: 100%;
     position: sticky;
@@ -17,9 +16,8 @@ Header {
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: 0.3s;
-    /* backdrop-filter: blur(5px); */
 }
-
+/* container */
 .header_container {
     display: flex;
     align-items: center;
@@ -29,7 +27,7 @@ Header {
     height: 190px;
     transition: 0.2s;
 }
-
+/* main logo */
 .logo {
     margin: 0 3em;
     cursor: pointer;
@@ -37,7 +35,7 @@ Header {
 .logo img {
     transition: 0.2s;
 }
-
+/* "navbar" links */
 .header_container ul {
     display: flex;
     list-style: none;
@@ -47,7 +45,6 @@ Header {
     margin: 2em;
     position: relative;
     transition: 0.2s;
-
 }
 
 .header_container ul li a {
@@ -124,17 +121,16 @@ Header {
 
 /* ___ body ___ */
 /* HERO */
-
 #hero {
     font-size: 26px;
     width: 100%;
-    /* height: 100vh; */
     margin-top: 9em;
 }
-#test {
+#page-bg-image {
     position: relative;
 }
-#test::before {
+/* circus bg image for whole page */
+#page-bg-image::before {
     content: "";
     position: absolute;
     background-image: url('kuvat/Circus-Restaurant.jfif');
@@ -146,23 +142,10 @@ Header {
     filter: brightness(0.3) grayscale(70%);
 
 }
-#test-inside {
+#page-bg-image-container {
     position: relative;
 }
-
-/* #hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    height: 250vh;
-    width: 100%;
-    background-image: url('kuvat/Circus-Restaurant.jfif');
-    background-size: cover;
-    filter: brightness(0.3) grayscale(70%);
-    z-index: -1;
-    background-attachment: fixed;
-} */
-
+/* container */
 .hero_container {
     color: #fff;
     text-align: center;
@@ -171,8 +154,6 @@ Header {
     max-width: 1100px;
     height: 800px;
     font-family: Arial, Helvetica, sans-serif;
-    /* background-color: green; */
-    /* position: relative; */
 }
 
 .hero_container h1 {
@@ -197,13 +178,6 @@ Header {
     white-space: nowrap;
 }
 
-/* .hero_p {
-    line-height: 34px;
-    font-size: 19px;
-    width: 70%;
-    margin: 0 auto;
-} */
-
 .curved_text {
     -ms-transform: rotate(2deg);
   transform: rotate(2deg);
@@ -221,9 +195,6 @@ Header {
     align-items: center;
     justify-content: center;
     margin-top: 23em;
-    /* margin-bottom: 3em; */
-    /* position: absolute;
-    bottom: 0; */
 }
 .hero_circus-ball img {
     width: 90px;
@@ -238,7 +209,6 @@ Header {
     background-size: contain;
     width: 95%;
     max-width: 850px;
-    /* background-color: red; */
     height: 485px;
     left: 0;
     right: 0;
@@ -279,10 +249,6 @@ Header {
 .frame_tickets {
     display: flex;
     flex-direction: column;
-    /* align-items: flex-end; */
-    /* background-color: yellow; */
-    /* width: 90%; */
-    /* margin: 0 auto; */
 }
 
 .lippu {
@@ -331,10 +297,6 @@ Header {
     overflow: hidden;
 }
 
-.lippu small {
-    /* font-size: 19px; */
-}
-
 .applyred {
     color: red;
 }
@@ -356,7 +318,6 @@ Header {
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
-    /* color: #222; */
     width: 25%;
     border: none;
     outline: none;
@@ -429,8 +390,6 @@ Header {
     /* font-family: 'Rye', serif; */
     font-family: 'EB Garamond', serif;
     font-size: 24px;
-    /* background-color: rgb(29, 29, 29); */
-    /* height: 1000px; */
     color: #fff;
     text-align: center;
     margin-top: 4em;
@@ -478,7 +437,6 @@ footer {
     background-color: #222;
     background-image: url('kuvat/circus-pattern.svg');
     background-repeat: repeat-x;
-    /* margin-top: 5em; */
     padding: 2em;
     text-align: center;
     color: white;
@@ -506,8 +464,6 @@ footer {
     }
     .header_container ul:first-child {
         margin-right: 15em;
-        /* background-color: red; */
-
     }
     
     .header_container ul li {
@@ -597,9 +553,6 @@ footer {
 }
 
 @media all and (max-width: 550px) {
-    * {
-        /* color: rgb(94, 94, 49); */
-    }
     /* hero */
     #hero {
         margin-top: 6em;

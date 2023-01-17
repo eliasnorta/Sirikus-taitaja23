@@ -8,7 +8,7 @@ CREATE TABLE `Esitys` (
   `paikat` int(10) NOT NULL,
   `vapaitapaikkoja` int(10) NOT NULL
 );
-
+/* creates table for tilaaja */
 CREATE TABLE `Tilaaja` (
   `tilaajaID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `sposti` varchar(30) NOT NULL,
